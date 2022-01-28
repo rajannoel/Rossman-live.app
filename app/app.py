@@ -8,7 +8,6 @@ from math import sqrt
 import joblib
 import xgboost as xgb
 import pickle
-from IPython.core.display import display
 app = Flask(__name__)
 
 @app.route("/",methods = ['GET','POST'])
