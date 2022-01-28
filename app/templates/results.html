@@ -1,0 +1,41 @@
+<center>
+    <img src="{{href}}" height=50 width = 100/>
+
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    </style>
+    </head>
+
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Store</th>
+            <th>Sales</th>
+        </tr>
+        {% for ind,row in df.iterrows() %}
+            <tr>
+                <td>{{row["Date"]}}</td>
+                <td>{{row["Store"]}} </td>
+                <td>{{row["Sales"]}} </td>
+            </tr>
+        {% endfor %}
+    </table>
+</center>
